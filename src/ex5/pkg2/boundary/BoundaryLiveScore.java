@@ -27,7 +27,7 @@ public class BoundaryLiveScore {
             System.out.print("Enter Score ");
             String score = in.nextLine();
             if(score.equals(""))break;
-            live.setSomeData(score);
+            live.setScoreLine(score);
         }
         
     }

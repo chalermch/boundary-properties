@@ -14,9 +14,9 @@ import java.io.Serializable;
  */
 public class LiveScoreBean implements Serializable {
     
-    public static final String scoreLine = "Thai 0-0 UAE";
+    public static final String SCORE_LINE_PROPERTY = "Thai 0-0 UAE";
     
-    private String someData;
+    private String scoreLine;
     
     private PropertyChangeSupport propertySupport;
     
@@ -24,14 +24,14 @@ public class LiveScoreBean implements Serializable {
         propertySupport = new PropertyChangeSupport(this);
     }
     
-    public String getSomeData() {
-        return someData;
+    public String getScoreLine() {
+        return scoreLine;
     }
     
-    public void setSomeData(String value) {
-        String oldValue = someData;
-        someData = value;
-        propertySupport.firePropertyChange(scoreLine, oldValue, someData);
+    public void setScoreLine(String value) {
+        String oldValue = scoreLine;
+        scoreLine = value;
+        propertySupport.firePropertyChange(SCORE_LINE_PROPERTY, oldValue, scoreLine);
     }
     
     public void addPropertyChangeListener(PropertyChangeListener listener) {
